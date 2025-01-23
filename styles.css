@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: #121212;
+    margin: 0;
+}
+label.company_name{
+    color: white;
+    font-size: 30px;
+    line-height: 120px;
+    padding: 20px 100px ;
+    font-weight: bold;
+}
+
+nav{
+    background-color: black;
+    margin: 0px;
+    width:100%;
+}
+
+ul.n{
+    list-style-type: none;
+}
+#navbar{
+    position: sticky;
+    top: 0;
+}
+nav ul{
+    overflow: auto;
+}
+nav li{
+    float: left;
+    margin: 45px 60px;
+    font-size: larger;
+    font-weight: 500;
+}
+nav li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+nav li a:hover {
+    background-color: white;
+    transition: 0.5s;
+    color: black;
+    border-radius: 15px;
+}
+.company_name{
+    color: rgb(255, 255, 255);
+    float: left;
+    padding: 20px 25px;
+    font-size: 48px;
+    margin: 18px;
+}
+.search {
+    float: left;
+    color: white;
+    background-color: white;
+    padding: 7px;
+    border-radius: 14px;
+    line-height: 15px;
+    margin-top: 30px;
+}
+
+nav input {
+    border: 0px solid black;
+    border-radius: 14px;
+    padding: 20px 20px;
+}
+
+aside{
+    float: left;
+    width: 40%;
+    background-color: #121212;
+    
+}
+
+#descp{
+    float: right;                                          
+    background-color:#121212;
+    width: 60%;
+    color: white;
+}   
+
+.fonts{  
+    font-family: 'League Spartan', sans-serif;
+}
+
+h2{
+    font-family: 'League Spartan', sans-serif;;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 30px;
+    padding: 10px;
+}
+#buttons{
+    text-align: center;
+}
+.bt{
+    font-size: 20px;  
+    padding: 15px;
+    margin: 30px;
+    color: rgb(246, 253, 253);
+    background-color: black;
+    border-radius: 12px;
+}
+#button-style{
+    background-color: black;
+    color: azure;
+    border:none;
+    padding:10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+#button-style:hover{
+    background-color: gray;
+    color: black;
+}
+input[type=number] {
+    
+    padding:10px 1px;
+    margin: 0px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+  }
+  
+  input[type=number]:focus {
+    border: 3px solid #555;
+  }
+h3{
+    font-size: 23px;
+    line-height: 30px;
+    color:black;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+
+}
+p1{
+    font-size: 25px;
+    color:black;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 100;
+}
+p2{
+    font-size: 30px;
+    color:rgb(255, 255, 255);
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 500;
+    padding: 10px;
+    margin: 10px;
+}
+li {
+    font-size: 25px;
+    color:rgb(255, 255, 255);
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 100;
+    padding: 5px;
+}
+#or{
+    margin-left:80px;
+    margin-right:60px;
+}
+.borderbox{
+    border-style: solid;
+    border-width: 3px;
+    color: gray;
+    padding-left: 30px;
+    margin: 20px ;
+    padding-top: 10px;
+    margin-top: 0;
+}
+ul.p{
+    list-style-type: disc;
+}
+#pname{
+    padding: 10px 14px;
+    padding-bottom: 0px;
+}
+#price{
+    padding: 20px;
+    font-size: 40px;
+}
+product-pricebox{
+    display: flex;
+    height: 50px;
+    background-color: brown;
+
+}
+#product_img{
+    width: 80%;
+    margin-left:45px;
+}
+.small-img{
+    width:80%;
+}
+.small-img-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;;
+}
+.small-img-column{
+    border: 2px solid black;
+    flex-basis: 24%;
+    cursor: pointer;
+    text-align: center;
+
+}
+.single-pro-img{
+    margin : 20px
+}
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+footer{
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    height: 90px;
+    border-radius: 20px;
+    
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 15px;
+    float: left;
+}
+
+footer a:hover{
+    color: black;
+    background-color: white;
+    border-radius: 30px;
+}
+
+footer a:visited{
+    color: royalblue;
+}
+
+.copyright{
+    float: right;
+}

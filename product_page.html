@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA_Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecom product page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/6ae2012b2f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul class="n">
+            <div class="company_name">E - HUB</div>
+            <span class="search">
+                <input type="text" name="search" id="search" placeholder="Search item "><img src="icons8-search.gif"
+                    alt="" width="20px">
+            </span>
+            <li><a href="index.html" >HOME</a> </li>
+            <li><a href="merchant.html" target="_blank">CONTACT US</a></li>
+            <li><a href="cart.html">CART</a></li>
+        </ul>
+        <div id="heading"></div>
+    </nav>
+    <div class="row">
+        <aside id="imgmain">
+        </aside>
+        <div id="descp">
+        </div>
+    </div>
+</body>
+<footer>
+    <a href="#">FAQ</a>
+    <a href="#">Contact Us</a>
+    <a href="#">Terms of Use</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#" class="copyright">&copy; Copyright</a>
+</footer>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', async ()=> {
+        const productdata= await getItem();
+        productfilling(productdata[0]);
+    }, false);
+    async function getItem(){
+        const url = new URL(window.location.href);
+        const id = url.searchParams.get("id");
+        console.log(id);
+        let response = await fetch(baseURL+'product?id='+id);
+        let data = response.json();
+        return data;
+    }
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="productjsfile.js"></script>
+</html>

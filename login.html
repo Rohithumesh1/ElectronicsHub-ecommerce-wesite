@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    form {
+        position: relative;
+        top: 25vh;
+        left: 25vw;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        opacity: 0.86;
+        width: 50%;
+    }
+
+    input[type="text"]#name,
+    input[type="text"]#email,
+    input[type="password"]#password {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px;
+        background-color: whitesmoke;
+    }
+
+    input[type="submit"] {
+        background-color: rgb(255, 0, 0);
+        color: white;
+        padding: 12px 20px 12px 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-weight: 900;
+        font-family: igino marini;
+
+    }
+
+    input[type="submit"]:hover {
+        background-color: green;
+        color: white;
+    }
+
+    input[type="reset"]:hover {
+        background-color: green;
+        color: white;
+    }
+
+    input[type="reset"] {
+        background-color: rgb(248, 0, 0);
+        color: white;
+        padding: 5px 5px 5px 5px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-weight: 900;
+    }
+
+    .loginForm span.checkSubmit {
+        display: flex;
+    }
+
+    .loginForm span.checkSubmit #getStarted {
+        margin: 20px;
+    }
+
+    .loginForm span.checkSubmit #reset {
+        margin: 20px;
+    }
+
+    .loginForm p {
+        background-color: white;
+        color: black;
+    }
+
+    .change {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+        margin-top: 20px;
+        padding: 5px;
+        border-radius: 8px;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+
+    .ch {
+        margin: 15px;
+    }
+</style>
+
+<body>
+    <nav id="navBar">
+        <a href="login.html"><img id="logo" src="e-hub.png" alt="logo" width="110vh"></a>
+        <span class="search_bar">
+            <input type="text" list="search_options" placeholder="Search item"><img class="search_icon"
+                src="icons8-search.gif" alt="" width="20px">
+            <datalist id="search_options">
+                <option value="APPLE 2022 MacBook AIR M2">APPLE 2022 MacBook AIR M2</option>
+                <option value="LENOVA ThinkBook 14 Gen 2 (Intel)">LENOVA ThinkBook 14 Gen 2 (Intel)</option>
+                <option value="HP Pavilion Gaming Ryzen 7 Octa Core AMD R7-5800H">HP Pavilion Gaming Ryzen 7 Octa Core
+                    AMD R7-5800H</option>
+                <option value="DELL XPS 17">DELL XPS 17</option>
+                <option value="Honor MagicBook 14">Honor MagicBook 14</option>
+                <option value="Acer Aspire 3 Intel Core i3 11th Gen">Acer Aspire 3 Intel Core i3 11th Gen</option>
+                <option value="OnePlus 8T 5G">OnePlus 8T 5G</option>
+                <option value="Realme GT Neo 2 128 GB">Realme GT Neo 2 128 GB</option>
+                <option value="Apple iPhone 13 Pro (1TB)">Apple iPhone 13 Pro (1TB)</option>
+                <option value="Nothing Phone (1) 5G">Nothing Phone (1) 5G</option>
+                <option value="OnePlus 10R 5G">OnePlus 10R 5G</option>
+                <option value="iQOO 9 SE 5G">iQOO 9 SE 5G</option>
+
+            </datalist>
+        </span>
+        <!-- &nbsp; -->
+        <!-- <span class="drop_down_icon">
+            <img class="drop_down" src="drop_down.png" alt="" width="20px">
+        </span> -->
+        <ul>
+            <li><a href="index.html">Home</a></li><select name="item_selection" id="item_selection"
+                onchange="oncall(value)" class="item_selection">
+                <option value="option">
+                    <li> Select Category </li>
+                </option>
+                <option value="Laptop">
+                    <li>Laptop</a></li>
+                </option>
+                <option value="Television">
+                    <li>Television</a></li>
+                </option>
+                <option value="Mobile">
+                    <li>Mobile</a></li>
+                </option>
+                <option value="PC-components">
+                    <li>PC-components</a></li>
+                </option>
+            </select>
+            <li><a href="merchant.html" target="_blank">Contact US</a></li>
+            <li>
+                <span class="cart"><a href="cart.html">Cart</a><img class="cart_icon" src="icons8-cart-64.png" alt=""
+                        width="30px">
+                </span>
+                <span class="loginButton" id="loginch"><a href="login.html">Login</a></span>
+            </li>
+        </ul>
+    </nav>
+    <div class="login"><video autoplay loop>
+            <source src="login.mp4" type="video/mp4">
+    </div>
+
+    <form class="loginPage" id="form">
+        <div class="loginForm">
+            <div class="ch">
+                <span><button class="change">Sign in</button></span>
+                <span><button class="change" onclick="func()">Sign up</button></span>
+            </div>
+            <br>
+            <input type="text" name="name" id="name" placeholder="User Name" required><br><br>
+            <input type="text" name="email" id="email" pattern=".+@bmsce.ac.in" required placeholder="User BMSCE email"
+                required>
+            <br><br>
+            <input type="password" name="password" id="password" placeholder="Enter password" minlength="8" required>
+            <span class="checkSubmit">
+                <br><br><input type="checkbox" name="rememberMe" id="rememberMe">
+                <input type="submit" value="GET STARTED" id="getStarted">
+                <input type="reset" value="RESET" id="reset">
+            </span>
+            <br>
+        </div>
+    </form>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script>
+    const baseURL = "http://172.188.26.52/api/";// comment this line to use in localhost environment
+    // const baseURL = "http://localhost:3000/";//uncomment to use in localhost environment
+    function func() {//sign up form
+        window.location.href = "signup.html";
+    }
+    $("form").submit(function (event) {
+        event.preventDefault();
+        $.post(baseURL+"login",
+            {
+                username: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                password: document.getElementById("password").value,
+                fingerprint: deviceInfo.fingerprint
+            },
+            function (data, status) {
+                console.log(data);
+                if (data.msg === "fingerprint mismatch") {
+                    alert("You must have used another device to logged in");
+                    $.post(baseURL+"verify",{
+                        email:data.email
+                    },function(data,status){
+                        console.log(data);
+                    });
+                    localStorage.setItem("username", data.username);
+                    localStorage.setItem("email", data.email);
+                    console.log("success");
+                    window.location.href = '/index.html'; 
+                } else if (data.msg === "login successful") {
+                    alert("Login successful");
+                    localStorage.setItem("username", data.username);
+                    localStorage.setItem("email", data.email);
+                    console.log("success");
+                    window.location.href = '/index.html'; 
+                } else if (data === "user not found") {
+                    alert("please sign up");
+                    window.location.reload();
+                }
+                else {
+                    alert("INCORRECT PASSWORD");
+                    window.location.reload();
+                }
+            });
+    });
+</script>
+<script>
+    const deviceInfo = {};
+    deviceInfo.userAgent = navigator.userAgent;
+    deviceInfo.screenResolution = `${window.screen.width}x${window.screen.height}`;
+    deviceInfo.timezoneOffset = new Date().getTimezoneOffset();
+    deviceInfo.plugins = Array.from(navigator.plugins).map((plugin) => plugin.name);
+    deviceInfo.language = navigator.language || navigator.userLanguage;
+    deviceInfo.platform = navigator.platform;
+    deviceInfo.cookiesEnabled = navigator.cookieEnabled;
+    deviceInfo.fingerprint = generateFingerprint();
+    function generateFingerprint() {
+      const fingerprintHash = hashCode(JSON.stringify(deviceInfo));
+      return fingerprintHash;
+    }
+    function hashCode(str) {
+      let hash = 0;
+      for (let i = 0; i < str.length; i++) {
+        const char = str.charCodeAt(i);
+        hash = (hash << 5) - hash + char;
+      }
+      return hash;
+    }
+    console.log(deviceInfo);
+</script>
+</html>

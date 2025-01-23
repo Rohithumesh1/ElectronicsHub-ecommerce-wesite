@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-size: 16px;
+    background-color:rgb(253, 252, 252);
+}
+nav{
+    background-color: rgb(0, 0, 0);
+    margin: 0px;
+    width:100%;
+}
+#navbar{
+    position: sticky;
+    top: 0;
+}
+nav ul{
+overflow: auto;
+}
+nav li{
+    
+    float: left;
+    margin: 35px 45px;
+    font-size: larger;
+}
+nav li a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+.company_name{
+    color: rgb(255, 255, 255);
+    float: left;
+    padding: 20px 45px;
+    font-size: 48px;
+}
+.pricing{
+    float: right;
+    width: 70%;
+    font-size: 20px;
+    padding: 0px 30px;
+    text-decoration: none;
+    color: rgb(0, 59, 59);
+}
+.search{
+    float: left;
+    color: rgb(63, 40, 40);
+    padding-left:  35px;
+    padding-right:  35px;
+    padding-top:  15px;
+}
+#search{
+    font-size: 20px;
+}
+nav input{
+    border: 2px solid black;
+    border-radius: 14px;
+    padding: 20px 30px;
+}
+#cart{
+    color: black;
+    font-size: 40px;
+    text-align: center;
+    border-bottom: 2px solid #000;
+}
+#totalprice{
+    border-bottom: 2px solid #000;
+    font-size: 20px;
+    padding: 10px;
+}
+ul {
+    list-style-type: none;
+    color: gray;
+    margin: 0;
+    padding: 0px;
+}
+ul li{
+    /* border-top: 2px solid black; */
+    border-bottom: 2px solid black;
+}
+.products{
+    display: flex;
+    flex-direction: column;
+}
+.img{
+    float: left;
+    width: 30%;
+}
+.bt{
+    padding: 5px;
+    margin: 20px;
+}
+label{
+    color: #000;
+    font-size: 20px;
+    margin: 30px;
+}
+input[type="number"]{
+    width: 50px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.description{
+    float: right;
+    width: 70%;
+    font-size:20px;
+    padding: 20px 30px;
+    text-decoration: none;
+    color: rgb(0, 59, 59);
+}
